@@ -1,6 +1,9 @@
-import test from 'tape'
+import test from "node:test"
+import assert from "node:assert"
+import subject from './main.js'
 
-test('template', function (t) {
-  t.equal(true, true)
-  t.end()
+test('does thing', (t) => {
+  const thing = subject()
+
+  assert.strictEqual(1, 1)
 })

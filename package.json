@@ -2,34 +2,32 @@
   "type": "module",
   "main": "main.js",
   "scripts": {
-    "bench": "node --use_strict benchmark.js",
-    "debug": "ndb nodemon --use_strict main.js",
-    "start:web": "vite",
-    "start:node": "nodemon --use_strict main.js | pino-pretty",
-    "test": "tap --node-arg=--use_strict --reporter=spec"
+    "bench": "node benchmark.js",
+    "debug": "ndb nodemon main.js",
+    "start:node": "nodemon main.js | pino-pretty",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "pino": "^7.6.3",
-    "pino-pretty": "^7.3.0",
-    "rot-js": "^2.2.0"
+    "pino": "^8.0.0",
+    "pino-pretty": "^8.0.0"
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "eslint": "^8.7.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "ndb": "^1.1.5",
-    "nodemon": "^2.0.15",
-    "tap": "^15.1.6",
-    "vite": "^2.7.13"
+    "nodemon": "^2.0.16"
   },
   "eslintConfig": {
     "env": {
-      "browser": true,
-      "es2021": true,
+      "es2022": true,
       "node": true
     },
     "extends": [
