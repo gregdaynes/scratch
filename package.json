@@ -11,7 +11,7 @@
     "profile": "0x -o main.js",
     "lint": "npx eslint",
     "lint:fix": "npx eslint --fix",
-    "prepare": "husky",
+    "setup": "git config core.hooksPath '.githooks/_'",
     "start": "node index.js",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage",
@@ -31,7 +31,6 @@
     "@commitlint/config-conventional": "^19.2.2",
     "es-toolkit": "^1.13.1",
     "esbuild": "^0.23.0",
-    "husky": "^9.1.4",
     "neostandard": "^0.11.2",
     "tinybench": "^2.9.0"
   }

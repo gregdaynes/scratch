@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "[ PrePush ]: Linting code "
+node --run lint
+
+echo "[ PrePush ]: Running Tests"
+node --run test
+
+echo "[ PrePush ]: Linting commits"
+node --run lint:commit
+
