@@ -1,19 +1,19 @@
 {
-  "name": "event-emitter",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "scratch",
+  "version": "0.1.0",
+  "main": "main.js",
   "type": "module",
   "scripts": {
-    "benchmark": "node benchmark.js",
+    "benchmark": "node --allow-natives-syntax benchmark.js",
     "build": "npx mkdirp build && npx esbuild --format=esm --bundle main.js > build/main.mjs",
     "build:benchmark": "npx mkdirp build && npx esbuild --format=esm --bundle benchmark.js > build/benchmark.mjs",
-    "dev": "node --watch index.js",
+    "dev": "node --watch main.js",
     "profile": "0x -o main.js",
     "lint": "npx eslint",
     "lint:fix": "npx eslint --fix",
     "lint:commit": "commitlint --from $(git rev-list origin..HEAD | tail -1) --to $(git rev-list origin..HEAD | head -1)",
     "setup": "git config core.hooksPath '.githooks/_'",
-    "start": "node index.js",
+    "start": "node main.js",
     "test": "node --test --experimental-test-snapshots",
     "test:update-snapshots": "node --test --experimental-test-snapshots --test-update-snapshots",
     "test:coverage": "node --test --experimental-test-coverage",
@@ -28,12 +28,14 @@
     "url": "https://github.com/gregdaynes/node-event-emitter"
   },
   "devDependencies": {
-    "0x": "^5.7.0",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "es-toolkit": "^1.13.1",
-    "esbuild": "^0.23.0",
-    "neostandard": "^0.11.2",
-    "tinybench": "^2.9.0"
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "0x": "^5.8.0",
+    "bench-node": "^0.6.0",
+    "es-toolkit": "^1.37.2",
+    "esbuild": "^0.25.4",
+    "mkdirp": "^3.0.1",
+    "neostandard": "^0.12.1",
+    "tinybench": "^4.0.1"
   }
 }

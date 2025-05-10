@@ -1,19 +1,19 @@
-import { Bench } from 'tinybench'
+import { Suite } from 'bench-node'
 import main from './main.js'
 
-const bench = new Bench({ time: 100 })
+const suite = new Suite()
 
-bench
+suite
   .add('No-Op', () => {})
   .add('Main', () => {
     main()
   })
 
-async function run () {
-  await bench.warmup()
-  await bench.run()
-
-  console.table(bench.table())
-}
-
-await run()
+suite.run()
+// async function run () {
+//   await suite.run()
+//
+//   console.table(.table())
+// }
+//
+// await run()
