@@ -10,3 +10,11 @@ npx degit gregdaynes/scratch my-scratch-app
 ```
 
 __replace my-scratch-app with a folder name to download the files to__
+
+In the new directory, run
+
+```sh
+npm run setup
+```
+
+This will setup git hooks, and make a copy of the example .env file.

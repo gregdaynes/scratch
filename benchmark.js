@@ -1,5 +1,5 @@
 import { Suite } from 'bench-node'
-import main from './main.js'
+import main from './main.ts'
 
 const suite = new Suite()
 
@@ -10,10 +10,3 @@ suite
   })
 
 suite.run()
-// async function run () {
-//   await suite.run()
-//
-//   console.table(.table())
-// }
-//
-// await run()
